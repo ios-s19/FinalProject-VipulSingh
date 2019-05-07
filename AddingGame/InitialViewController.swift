@@ -15,6 +15,25 @@ class InitialViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //generate random numbers
+    func generateRandomNumber() -> String
+    {
+        var result:String = ""
+        
+        for _ in 1...4
+        {
+            let digit = Int.random(in: 1..<9)
+            
+            result += "\(digit)"
+        }
+        
+        return result
+    }
 
 
     /*

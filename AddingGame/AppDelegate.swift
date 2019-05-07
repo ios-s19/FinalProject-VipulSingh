@@ -12,10 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var mainWindow:InitialViewController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        mainWindow = InitialViewController(nibName: "InitialViewController", bundle:nil)
+        
+        let frame = UIScreen.main.bounds
+        window = UIWindow(frame: frame)
+        
+        window!.rootViewController = mainWindow
+        window!.makeKeyAndVisible()
+        
         return true
     }
 
