@@ -20,12 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         mainWindow = InitialViewController(nibName: "InitialViewController", bundle:nil)
         
+        //this code deals with the resolution and window
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
+        
         
         window!.rootViewController = mainWindow
         window!.makeKeyAndVisible()
         
+        //return value
         return true
     }
 
